@@ -1,53 +1,96 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <link rel="stylesheet" href="styles.css">
+        <title>How A Drone Is Built - A One Page Primer For Everyone</title>
     </head>
-    <body>
+    <header>
         <h1>How a Drone Is Built</h1>
-        <h3>A One Page Primer For Everyone by <b>Will Nicholson</b></h3>
-        <p>You've likely been to Best Buy and seen the DJI Mavic drones, or the Mavic Mini's or the Autel Evo on the shelf. Maybe you've seen the mini quadcopters they sell at kiosks at the mall - maybe you've seen the automated swarms that Intel has designed. They look incredibly sophisticated, and they are. But a lot of that sleek, technical look that you see is just <em>design</em>. In this modern age where electronics are lighter, smarter and cheaper, you'd be surprised at how simple (from a high level, pun intended) these drones really are.</p>
-        <h3>The Mechanics</h3>
-        <p>For starters the physics of a drone are not much more complicated than a plane. There are (generally) four motors with propellers (props) mounted on four "arms" with the "guts" or fuselage at the juncture of the arms. There may or may not be gimbal mounted cameras on them. And that's pretty much the baseline. As far as the "physics": one thing to keep in mind to help understand how they move is that none of the arms move, the motors don't pivot, there aren't flaps that guide airflow in order to manipulate how to drone moves (the thrust vector). All of the movement of the drone is acheived entirely based on the differential speed of each of the four motors. If the back two motors are rotating faster than the front motors, the back end will lift more and the drone will have a forward slanted stance or "pitch". At this point the drone will move in a forward direction. So it stands to reason that if all the motors are spinning at the same rate, the drone will sit level. A faster common motor speed will lift the drone, and a slower common speed will lower it. If the two motors on the right spin up faster, the right side will lift and it will "roll" towards the left.</p>
-        <img src="images/dronemechanics.png" alt="Drone Mechanics Diagram" width="450">
-        <h3>The Electronics</h3>
-        <p>Let's go from the "outside" in, that is, from the extremeties (the motors on the arms) and work our way in towards the "brain". First, most drone motors are generally what are known "brushless motors", made up of a ring of magnets on the outside/top or "bell" of the motor (this is the piece to which the props attach), and then there's a ring of metal pieces on the "bottom" of the motor known as the "stators" or stator stack. Around these stators are wrapped copper strands known as "coils" to which wires supplying the electricity to create the electromagnetism are attached. The voltage supplied to these coils is proportional to the magnetic force that counters the magnets on the bell and spins the motor.</p>
-        <img src="images/brushlessmotor.JPG" alt="Diagram of brushless motor" width="450">
-        <p>But what controls the voltage delivered to these motors? Let's move closer to the brain. This voltage is regulated by a component known as an ESC, or <b>E</b>lectronic <b>S</b>peed <b>C</b>ontroller.</p> <p>We'll skip the evolution of a lot of these components, but the current basics are as follows. The ESCs have three connections:</p>
+        <h3>A One Page Primer For Everyone by <b>Will Nicholson</b></h3><img style="float: right;" src="images/me.jpg" alt="Me" width="300">
+    </header>
+    <main>
+        <div id="intro">
+            <blockquote>
+           You've likely been to Best Buy and seen the DJI Mavic drones, or the Mavic Mini's or the Autel Evo on the shelf. Maybe you've seen the mini quadcopters they sell at kiosks at the mall - maybe you've seen the automated swarms that Intel has designed. They look incredibly sophisticated, and they are. But a lot of that sleek, technical look that you see is just <em>design</em>. In this modern age where electronics are lighter, smarter and cheaper, you'd be surprised at how simple (from a high level, pun intended) these drones really are.
+            
+        </blockquote>
+        </div>
+
+        <article>
+         <h3><u>The Mechanics</u></h3>
+            <p>For starters the physics of a drone are not much more complicated than a plane. There are (generally) four motors with propellers (props) mounted on four "arms" with the "guts" or fuselage at the juncture of the arms. There may or may not be gimbal mounted cameras on them. And that's pretty much the baseline. As far as the "physics": one thing to keep in mind to help understand how they move is that none of the arms move, the motors don't pivot, there aren't flaps that guide airflow in order to manipulate how to drone moves (the thrust vector). All of the movement of the drone is acheived entirely based on the differential speed of each of the four motors. If the back two motors are rotating faster than the front motors, the back end will lift more and the drone will have a forward slanted stance or "pitch". At this point the drone will move in a forward direction. So it stands to reason that if all the motors are spinning at the same rate, the drone will sit level. A faster common motor speed will lift the drone, and a slower common speed will lower it. If the two motors on the right spin up faster, the right side will lift and it will "roll" towards the left.</p>
+        </article>
+
+        <img style="float: left" src="images/dronemechanics.png" alt="Drone Mechanics Diagram" width="450">
+
+        <article>
+            <h3><u>The Electronics</u></h3>
+                <p>Let's go from the "outside" in, that is, from the extremeties (the motors on the arms) and work our way in towards the "brain". First, most drone motors are generally what are known "brushless motors", made up of a ring of magnets on the outside/top or "bell" of the motor (this is the piece to which the props attach), and then there's a ring of metal pieces on the "bottom" of the motor known as the "stators" or stator stack. Around these stators are wrapped copper strands known as "coils" to which wires supplying the electricity to create the electromagnetism are attached. The voltage supplied to these coils is proportional to the magnetic force that counters the magnets on the bell and spins the motor.</p>
+        </article>
+
+        <img style="float:right" src="images/brushlessmotor.JPG" alt="Diagram of brushless motor" width="450">
+        
+        <article>
+            <br>
+            <br>
+            <p>     But what controls the voltage delivered to these motors? Let's move closer to the brain. This voltage is regulated by a component known as an ESC, or <b>E</b>lectronic <b>S</b>peed <b>C</b>ontroller.</p> <p>We'll skip the evolution of a lot of these components, but the current basics are as follows. The ESCs have three connections:</p>
         <ul>
             <li>Three wires that supply power in phases to groups of coil windings on the motors.</li>
             <li>Straight to the main battery (generally via a Power Distribution Board or PDB) to get said power.</li>
             <li>A two-wire (generally black and white) connection to the "brain" that digitally tells the ESC how much power to pass through from the battery.</li>
         </ul>
-        <img src="images/esc.png" alt="A typical ESC" width="450">
-        <p><b>My favorite part - THE BRAIN!</b> AKA the <b>flight controller</b> AKA the expensive part that I break a lot in crashes AKA the piece that everybody feels like will make them fly better AKA the part that newbies heat up too much while soldering everything together.</p>
+        </article>
+
+            <img style="float:left" src="images/esc.png" alt="A typical ESC" width="350">
+
+        <article> 
+            <p><b>My favorite part - THE BRAIN!</b> AKA the <b>flight controller</b> AKA the expensive part that I break a lot in crashes AKA the piece that everybody feels like will make them fly better AKA the part that newbies heat up too much while soldering everything together.</p>
         <p>The flight controller serves a number of functions:</p>
-        <ul>
-            <li>The central hub for connecting ESCs, Camera/On Screen Display (OSD) chips, the video transmitter (if equipped), the controller receiver (for command from the pilot), GPS, extra servo motors, etc.</li>
-            <li>The PID controller: <ul>
-                <li>Takes in info from the gyroscope and accelerometers</li>
-                <li>Uses that info to determine if the behavior of the drone matches the commands from the pilot</li>
-                <li>Adjusts the output to the motors algorithmically</li>
-            </ul></li>
+            <ul style="margin-left: 20%;">
+                <li>The central hub for connecting ESCs, Camera/On Screen Display (OSD) chips, the video transmitter (if equipped), the controller receiver (for command from the pilot), GPS, extra servo motors, etc.</li>
+                
+                <li>The PID controller: 
+                    <ul>
+                        <li>Takes in info from the gyroscope and accelerometers</li>
+                        <li>Uses that info to determine if the behavior of the drone matches the commands from the pilot</li>
+                        <li>Adjusts the output to the motors algorithmically</li>
+                </ul></li>
+
             <li>Monitors and displays/sends information about battery level.</li>
+
             <li>Uses flight plan data in conjunction with the GPS and barometer to guide autonomous flights.</li>
+
             <li>Allows for USB connection to computers for flight controller tuning/firmware upgrades/black box data.</li>
-            <img src="images/flightcontroller.jpg" alt="Omnibus F4 Flight Controller" width="450">
+
         </ul>
-        <h3>The Rest</h3>
-        <p>We've discussed the main components of the drone itself. With these components alone a drone can function. There are some other things that could be discussed at great length themselves, but I'll just give a quick summary of optional components.</p>
+        </article>   
+
+            <img style="float:right" src="images/flightcontroller.jpg" alt="Omnibus F4 Flight Controller" width="450">
+        
+        <article>
+            <h3><u>The Rest</u></h3>
+            <p>We've discussed the main components of the drone itself. With these components alone a drone can function. There are some other things that could be discussed at great length themselves, but I'll just give a quick summary of optional components.</p>
         <ul>
             <li>Live or first-person video system - the analog/digital cameras can be attached to the drone that feed live video back to a receiver, either on the controller (aka transmitter) or to goggles worn by the pilot. (See below for a video example of a first person flight, or the photo up top where I look like Rick Moranis in <i>Honey I Blew Up The Kid</i>)</li>
             <li>Control receiver - this can be wired to the flight controller to receive instructions from the controller operated by the pilot.</li>
             <li>Gimbal/Camera control - in the case of videography drones, heavy DSLR-type cameras can be attached to a self-leveling gimbal and will record beautiful, smooth aerial video.</li>
             <li>Sensors - drones are being used for all sorts of things like methane detection at gas drilling sites, land surveying, site inspection, agricultural surveying or crop-dusting.</li>
         </ul>
-        <p>Truly the possibilities are endless, and we're just scratching the surface as it pertains to our use of these devices for delivery of goods, surveying or just *plane* old fun. Below is a video I took just goofing around in a field in manual, un-leveled flight. Yes, those trees are a hazard, and you might need to level up your rock-chucking skills if you wind up in the branches - don't ask me how I know. Also below is a Sticher player with an episode of the <a href="https://www.lookwhatidid.net/will-nicholson"><em>Look What I Did&#174;</em></a> podcast in which I discuss just making things, primarily related to drones.</p>
-        <div><a href="https://www.stitcher.com/show/look-what-i-did/episode/will-nicholson-diy-drone-designer-68775669"><img style="vertical-align:middle" src="images/playbutton.png" alt="Play Button" width="35"><span style="">Listen To Will's <em>Look What I Did&#174;</em> episode.</span></div>
-            <br>
-            <br>
-            <br>
+            <p>Truly the possibilities are endless, and we're just scratching the surface as it pertains to our use of these devices for delivery of goods, surveying or just *plane* old fun. Below is a video I took just goofing around in a field in manual, un-leveled flight. Yes, those trees are a hazard, and you might need to level up your rock-chucking skills if you wind up in the branches - don't ask me how I know. Also below is a Sticher player with an episode of the <a href="https://www.lookwhatidid.net/will-nicholson"><em>Look What I Did&#174;</em></a> podcast in which I discuss just making things, primarily related to drones.</p>
+        </article>
+        
+        
+        <div id="lookwhat">
+            <a href="https://www.stitcher.com/show/look-what-i-did/episode/will-nicholson-diy-drone-designer-68775669"><img style="vertical-align:middle" src="images/playbutton.png" alt="Play Button" width="35"><span> Listen To Will's <em>Look What I Did&#174;</em> episode.</span></a>
+        </div>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/7VaFe6mPlj8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </body>
+        <div class="videowrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/7VaFe6mPlj8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        
+         
+        
+            
+    </main>
+    <footer style="text-align: center;">I'm kinda bad at design. Clearly I spent more time crashing drones than building web pages. I'm working on it. &#169;2020 Will Nicholson.</footer>
 </html>
