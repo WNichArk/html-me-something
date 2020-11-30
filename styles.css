@@ -56,8 +56,8 @@ footer {
 img {
     margin: 16px;
     border-radius: 12%;
-    border:4px;
-    border-style: double;
+    border:8px;
+    border-style:solid;
     border-color: aquamarine;
 }
 
