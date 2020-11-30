@@ -18,14 +18,14 @@
 
         <article>
          <h3><u>The Mechanics</u></h3>
-            <p>For starters the physics of a drone are not much more complicated than a plane. There are (generally) four motors with propellers (props) mounted on four "arms" with the "guts" or fuselage at the juncture of the arms. There may or may not be gimbal mounted cameras on them. And that's pretty much the baseline. As far as the "physics": one thing to keep in mind to help understand how they move is that none of the arms move, the motors don't pivot, there aren't flaps that guide airflow in order to manipulate how to drone moves (the thrust vector). All of the movement of the drone is achieved entirely based on the differential speed of each of the four motors. If the back two motors are rotating faster than the front motors, the back end will lift more and the drone will have a forward slanted stance or "pitch". At this point the drone will move in a forward direction. So it stands to reason that if all the motors are spinning at the same rate, the drone will sit level. A faster common motor speed will lift the drone, and a slower common speed will lower it. If the two motors on the right spin up faster, the right side will lift and it will "roll" towards the left.</p>
+            <p>For starters the physics of a drone are not much more complicated than a plane. There are (generally) four motors with propellers (props) mounted on four "arms" with the "guts" or fuselage at the juncture of the arms. There may or may not be gimbal mounted cameras on them. And that's pretty much the baseline. As far as the "physics": one thing to keep in mind to help understand how they move is that none of the arms move, the motors don't pivot, there aren't ailerons/rudders that guide airflow in order to manipulate how to drone moves (the thrust vector). All of the movement of the drone is achieved entirely based on the differential speed of each of the four motors. If the back two motors are rotating faster than the front motors, the back end will lift more and the drone will have a forward slanted stance or "pitch". At this point the drone will move in a forward direction. So it stands to reason that if all the motors are spinning at the same rate, the drone will sit level. A faster common motor speed will lift the drone, and a slower common speed will lower it. If the two motors on the right spin up faster, the right side will lift and it will "roll" towards the left.</p>
         </article>
 
         <img style="float: left" src="images/dronemechanics.png" alt="Drone Mechanics Diagram" width="450">
 
         <article>
             <h3><u>The Electronics</u></h3>
-                <p>Let's go from the "outside" in, that is, from the extremeties (the motors on the arms) and work our way in towards the "brain". First, most drone motors are generally what are known "brushless motors", made up of a ring of magnets on the outside/top or "bell" of the motor (this is the piece to which the props attach), and then there's a ring of metal pieces on the "bottom" of the motor known as the "stators" or stator stack. Around these stators are wrapped copper strands known as "coils" to which wires supplying the electricity to create the electromagnetism are attached. The voltage supplied to these coils is proportional to the magnetic force that counters the magnets on the bell and spins the motor.</p>
+                <p>Let's go from the "outside" in, that is, from the extremeties (the motors on the arms) and work our way in towards the "brain". First, most drone motors are generally what are known as "brushless motors", made up of a ring of magnets on the outside/top or "bell" of the motor (this is the piece to which the props attach), and then there's a ring of metal pieces on the "bottom" of the motor known as the "stators" or stator stack. Around these stators are wrapped copper strands known as "coils" to which wires supplying the electricity to create the electromagnetism are attached. The voltage supplied to these coils is proportional to the magnetic force that counters the magnets on the bell and spins the motor.</p>
         </article>
 
         <img style="float:right" src="images/brushlessmotor.JPG" alt="Diagram of brushless motor" width="450">
@@ -52,7 +52,7 @@
                 <li>The PID controller: 
                     <ul>
                         <li>Takes in info from the gyroscope and accelerometers</li>
-                        <li>Uses that info to determine if the behavior of the drone matches the commands from the pilot</li>
+                        <li>Uses that info to determine if the behavior of the drone matches the commands from the pilot or flight plan</li>
                         <li>Adjusts the output to the motors algorithmically</li>
                 </ul></li>
 
