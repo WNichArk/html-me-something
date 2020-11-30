@@ -16,37 +16,39 @@
         </blockquote>
         </div>
 
+        <img style="float: left" src="images/dronemechanics.png" alt="Drone Mechanics Diagram" width="450">
+        
         <article>
          <h3><u>The Mechanics</u></h3>
             <p>For starters the physics of a drone are not much more complicated than a plane. There are (generally) four motors with propellers (props) mounted on four "arms" with the "guts" or fuselage at the juncture of the arms. There may or may not be gimbal mounted cameras on them. And that's pretty much the baseline. As far as the "physics": one thing to keep in mind to help understand how they move is that none of the arms move, the motors don't pivot, there aren't ailerons/rudders that guide airflow in order to manipulate how to drone moves (the thrust vector). All of the movement of the drone is achieved entirely based on the differential speed of each of the four motors. If the back two motors are rotating faster than the front motors, the back end will lift more and the drone will have a forward slanted stance or "pitch". At this point the drone will move in a forward direction. So it stands to reason that if all the motors are spinning at the same rate, the drone will sit level. A faster common motor speed will lift the drone, and a slower common speed will lower it. If the two motors on the right spin up faster, the right side will lift and it will "roll" towards the left.</p>
         </article>
 
-        <img style="float: left" src="images/dronemechanics.png" alt="Drone Mechanics Diagram" width="450">
+        <img style="float:right" src="images/brushlessmotor.JPG" alt="Diagram of brushless motor" width="450">
 
         <article>
             <h3><u>The Electronics</u></h3>
                 <p>Let's go from the "outside" in, that is, from the extremeties (the motors on the arms) and work our way in towards the "brain". First, most drone motors are generally what are known as "brushless motors", made up of a ring of magnets on the outside/top or "bell" of the motor (this is the piece to which the props attach), and then there's a ring of metal pieces on the "bottom" of the motor known as the "stators" or stator stack. Around these stators are wrapped copper strands known as "coils" to which wires supplying the electricity to create the electromagnetism are attached. The voltage supplied to these coils is proportional to the magnetic force that counters the magnets on the bell and spins the motor.</p>
         </article>
 
-        <img style="float:right" src="images/brushlessmotor.JPG" alt="Diagram of brushless motor" width="450">
+        <img style="float:left" src="images/esc.png" alt="A typical ESC" width="350">
         
         <article>
             <br>
             <br>
             <p>     But what controls the voltage delivered to these motors? Let's move closer to the brain. This voltage is regulated by a component known as an ESC, or <b>E</b>lectronic <b>S</b>peed <b>C</b>ontroller.</p> <p>We'll skip the evolution of a lot of these components, but the current basics are as follows. The ESCs have three connections:</p>
-        <ul>
+        <ul style="margin-left:20%">
             <li>Three wires that supply power in phases to groups of coil windings on the motors.</li>
             <li>Straight to the main battery (generally via a Power Distribution Board or PDB) to get said power.</li>
             <li>A two-wire (generally black and white) connection to the "brain" that digitally tells the ESC how much power to pass through from the battery.</li>
         </ul>
         </article>
 
-            <img style="float:left" src="images/esc.png" alt="A typical ESC" width="350">
+        <img style="float:right" src="images/flightcontroller.jpg" alt="Omnibus F4 Flight Controller" width="450">
 
         <article> 
             <p><b>My favorite part - THE BRAIN!</b> AKA the <b>flight controller</b> AKA the expensive part that I break a lot in crashes AKA the piece that everybody feels like will make them fly better AKA the part that newbies heat up too much while soldering everything together.</p>
         <p>The flight controller serves a number of functions:</p>
-            <ul style="margin-left: 20%;">
+            <ul>
                 <li>The central hub for connecting ESCs, Camera/On Screen Display (OSD) chips, the video transmitter (if equipped), the controller receiver (for command from the pilot), GPS, extra servo motors, etc.</li>
                 
                 <li>The PID controller: 
@@ -65,7 +67,7 @@
         </ul>
         </article>   
 
-            <img style="float:right" src="images/flightcontroller.jpg" alt="Omnibus F4 Flight Controller" width="450">
+            
         
         <article>
             <h3><u>The Rest</u></h3>
